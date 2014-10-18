@@ -7,3 +7,6 @@ deploy:
     secure: "jYDKgxcwLOS2NsElI296O3FZqVSP1wDsrxV46QjN2qY6uHkXEUeVcfEQFCpTxyCfCnzJrgPpai/CmYW5hc4bUcKnPt0mqYRNbC7t2lLwQpdbDUdUr2G6kRTn/gRnufgx3AHxXDXUe5vA1Q9WS8sKnQdxXMBBriMH5hcSP/PpI8Y="
   app: hanauta-hubot
   strategy: git
+notifications:
+  slack:
+    secure: "Q2CkipqL3NNIBnhQI4tsTs/IZ1q9RgdOlC4uQ5ZjY7YuvladcKZf3qWpIejrg5tNUSLgzU4BZjgKibiA3u2wHu+t7gkiYc66sKxk5/jgHmGyBa7ELvYFT1SrEd/qT1xcPwcEOv3ZTcJO5txgfQ+DLvyCg1hYuywYk52QOT+lHnY="
