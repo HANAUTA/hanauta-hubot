@@ -1,2 +1,21 @@
+# Node
 node_modules
-.DS_Store*
+
+# RDS dump
+dump.rdb
+
+# Keep empty file
+!empty
+
+# Intellij
+.idea/*
+*.iml
+*.iws
+
+# Filesystem dust / Others
+.DS_Store
+.*.sw[a-p]
+*.dat
+*.tmp
+ehthumbs.db
+Thumbs.db
