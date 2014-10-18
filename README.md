@@ -1,3 +1,7 @@
+### Latest Build Stasus on Travis CI!
+
+[![Build Status](https://travis-ci.org/HANAUTA/hanauta-hubot.svg?branch=master)](https://travis-ci.org/HANAUTA/hanauta-hubot)
+
 # Hubot
 
 This is a version of GitHub's Campfire bot, hubot. He's pretty cool.
@@ -50,26 +54,6 @@ If you don't require any persistence feel free to remove the
 about redis at all.
 
 [redistogo]: https://redistogo.com/
-
-## Adapters
-
-Adapters are the interface to the service you want your hubot to run on. This
-can be something like Campfire or IRC. There are a number of third party
-adapters that the community have contributed. Check
-[Hubot Adapters][hubot-adapters] for the available ones.
-
-If you would like to run a non-Campfire or shell adapter you will need to add
-the adapter package as a dependency to the `package.json` file in the
-`dependencies` section.
-
-Once you've added the dependency and run `npm install` to install it you can
-then run hubot with the adapter.
-
-    % bin/hubot -a <adapter>
-
-Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
-
-[hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
 
 ## hubot-scripts
 

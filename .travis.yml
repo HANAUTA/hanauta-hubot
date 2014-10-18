@@ -6,3 +6,4 @@ deploy:
   api_key:
     secure: "jYDKgxcwLOS2NsElI296O3FZqVSP1wDsrxV46QjN2qY6uHkXEUeVcfEQFCpTxyCfCnzJrgPpai/CmYW5hc4bUcKnPt0mqYRNbC7t2lLwQpdbDUdUr2G6kRTn/gRnufgx3AHxXDXUe5vA1Q9WS8sKnQdxXMBBriMH5hcSP/PpI8Y="
   app: hanauta-hubot
+  strategy: git
