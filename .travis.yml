@@ -9,4 +9,4 @@ deploy:
   strategy: git
 notifications:
   slack:
-    secure: "Q2CkipqL3NNIBnhQI4tsTs/IZ1q9RgdOlC4uQ5ZjY7YuvladcKZf3qWpIejrg5tNUSLgzU4BZjgKibiA3u2wHu+t7gkiYc66sKxk5/jgHmGyBa7ELvYFT1SrEd/qT1xcPwcEOv3ZTcJO5txgfQ+DLvyCg1hYuywYk52QOT+lHnY="
+    secure: "UaQq9GSC/3b7sCWSC09hHvyTViStNOCNx6l9WocbvqmKCGUZO1El5SD6btS72o7gJMiKg2bd9rzVcKawIeSaE6yUZ/sZnU4ioDJ+pfLa2DHzR37QYNR9t5egcbEP3d6dT5mvZ6fVtFozrXidA+TWKWeUJtLehCrxxPlzkGUcq5U="
