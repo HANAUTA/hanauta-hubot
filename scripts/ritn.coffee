@@ -9,7 +9,7 @@ conditions =
   "Drizzle": "小雨",
   "Rain": "雨",
   "Snow": "雪",
-  "Clouds": "曇り"
+  "Clouds": "曇り",
   "Clear": "晴れ"
 
 module.exports = (robot) ->
@@ -23,18 +23,26 @@ module.exports = (robot) ->
       .query({})
       .get() (err, res, body) ->
 
-        weather = JSON.parse(body)
+        try
+          weather = JSON.parse(body)
+        catch error
+          msg.send "JSONをパースできませんでした＞＜ (Error: #{error})"
+          return
 
-        if weather.cod == '404'
-          msg.send "#{city} は存在しません＞＜"
+        switch parseInt(weather.cod, 10)
+          when 404
+            msg.send "#{city} は存在しません＞＜"
 
-        else if weather.cod and weather.message
-          msg.send "#{weather.cod} : #{weather.message}"
+          when 200
+            # 天気のタイトル
+            main_condition = weather["weather"][0]["main"] ? undefined
+            if main_condition?
+              # 日本語訳があれば変換、なければ英語
+              translated_condition = conditions[main_condition] ? main_condition
+              msg.send "#{city} の天気 #{translated_condition}"
 
-        else
-          # 天気のタイトル
-          main_condition = weather["weather"][0]["main"] ? undefined
-          if main_condition?
-            # 日本語訳があれば変換、なければ英語
-            translated_condition = conditions[main_condition] ? main_condition
-            msg.send "#{city} の天気 #{translated_condition}"
+          else
+            if weather.message
+              msg.send "#{weather.cod} : #{weather.message}"
+            else
+              msg.send "天気を取得できませんでした＞＜ (Code: #{weather.cod}, City: #{city})"
