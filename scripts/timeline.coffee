@@ -10,7 +10,7 @@
 # Author:
 #   vexus2
 
-#request = require 'request'
+request = require 'request'
 module.exports = (robot) ->
   robot.hear /.*?/i, (msg) ->
     channel = msg.envelope.room
